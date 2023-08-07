@@ -1,6 +1,9 @@
 # Leanpub Quarto Template
 
-If you plan to write a book with this template and publish on Leanpub, then
+See the result
+[here](https://github.com/pachadotdev/leanpub-quarto-template/blob/main/book.pdf).
+
+Instructions to use this template:
 
 1. Clone this repository
 2. Edit `book.qmd` to add your book's title, author, and other information
