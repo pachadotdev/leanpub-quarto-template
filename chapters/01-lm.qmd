@@ -1,0 +1,13 @@
+# Linear Models
+
+## Example 1
+
+Write chapter 1 here.
+
+Read @baltagi_econometrics_2021!
+
+Add some R code.
+
+```{r example1, warning=FALSE, message=FALSE, eval=TRUE}
+summary(lm(mpg ~ wt, data = mtcars))
+```

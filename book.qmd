@@ -1,0 +1,49 @@
+---
+title: "Leanpub Quarto Template"
+subtitle: "To write ebooks in Quarto and publish them in Leanpub"
+author: "Your R. Name"
+date: 2023-08-06
+format:
+  pdf:
+    pdf-engine: pdflatex # xelatex and other also work
+    highlight: tango # "default", "tango", "pygments", "kate", "monochrome", "espresso", "zenburn", "haddock"
+    template: "tex/templatebook.tex"
+    top-level-division: chapter
+    keep-tex: true
+bibliography: "bib/references.bib"
+csl: "csl/chicago_manual_of_style_17th_edition_author_date.csl" # Download your specific csl file and refer to it in the line below (see https://www.zotero.org/styles/)
+customfonts: true
+fontsize: 11pt
+marginleft: 1in
+marginright: 1in
+margintop: 1in
+marginbottom: 1in
+paper: letterpaper # a4paper, executivepaper, legalpaper, etc also works
+onetwoside: oneside
+amsmath: false
+leanpublink: xxx
+isbn: yyy
+draft: true
+---
+
+```{r setup, include=FALSE}
+if (!require("dplyr")) install.packages("dplyr", repos = "https://cran.rstudio.com")
+if (!require("stargazer")) install.packages("stargazer", repos = "https://cran.rstudio.com")
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+```
+
+\frontmatter
+
+```{r child = 'chapters/00-preface.qmd', eval = T}
+```
+
+\mainmatter
+
+```{r child = 'chapters/01-lm.qmd', eval = T}
+```
+
+```{r child = 'chapters/02-glm.qmd', eval = T}
+```
+
+# References

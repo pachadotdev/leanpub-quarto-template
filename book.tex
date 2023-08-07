@@ -1,0 +1,245 @@
+\documentclass[letterpaper, 11pt, oneside]{scrbook}
+
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+
+% redefine \maketitle from scrbook to print timestamp
+\renewcommand{\maketitle}{%
+  \begin{titlepage}
+    \begin{center}
+      \vfill
+      \Huge
+      \textbf{Leanpub Quarto Template}
+      \vfill
+      \LARGE
+      To write ebooks in Quarto and publish them in Leanpub
+      \vfill
+      \textbf{Your R. Name}
+      \vfill
+      \includegraphics[width=0.4\textwidth]{figures/leanpub.pdf}
+      \vfill
+    \end{center}
+  \end{titlepage}
+}
+
+\author{Your R. Name}
+\title{Leanpub Quarto Template}
+\date{2023-08-06}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage{color}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{wallpaper}
+
+
+% texlive >= 2020
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{CSLReferences}[2]
+  {}
+  {\par}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+% set link colour to UofT blue (#00204e)
+\usepackage{xcolor}
+\definecolor{myblue}{HTML}{00204e}
+\hypersetup{colorlinks,linkcolor=myblue,urlcolor=myblue}
+
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\begin{document}
+  \pagenumbering{gobble}
+  \ThisLLCornerWallPaper{1}{figures/cover.pdf}
+  \begin{center}\end{center} % gross hack to avoid pages overlapping
+  \cleardoublepage
+  \newpage
+
+  \maketitle
+
+  \chapter*{Leanpub Quarto Template}
+
+  by Your R. Name
+
+  \copyright 2023-08-06 Your R. Name
+
+  Published by Leanpub, 1321 Blanshard Street, Suite 301, Victoria, BC V8W 0B6.
+  
+  This is a Leanpub book. Leanpub empowers authors and publishers with the Lean
+  Publishing process. Lean Publishing is the act of publishing an in-progress
+  ebook using lightweight tools and many iterations to get reader feedback, pivot
+  until you have the right book and build traction once you do.
+
+  Online edition is available for this title
+  (\emph{https://leanpub.com/xxx}).
+
+  2023-08-06: First Edition
+
+  The Leanpub logo is a registered trademark of Ruboss Technology Corp. The
+  book right's belong to the author.
+
+  yyy
+
+  \newpage
+
+  \tableofcontents
+
+  \mainmatter
+
+  % main chapters go here
+  \frontmatter
+
+  \hypertarget{preface}{%
+  \chapter{Preface}\label{preface}}
+
+  42 is the ``Answer to the Ultimate Question of Life, the Universe, and
+  Everything''.
+
+  \begin{center}
+  Don't panic!
+  \end{center}
+
+  \mainmatter
+
+  \hypertarget{linear-models}{%
+  \chapter{Linear Models}\label{linear-models}}
+
+  \hypertarget{example-1}{%
+  \section{Example 1}\label{example-1}}
+
+  Write chapter 1 here.
+
+  Read Baltagi (2021)!
+
+  Add some R code.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(}\FunctionTok{lm}\NormalTok{(mpg }\SpecialCharTok{\textasciitilde{}}\NormalTok{ wt, }\AttributeTok{data =}\NormalTok{ mtcars))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+
+Call:
+lm(formula = mpg ~ wt, data = mtcars)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.5432 -2.3647 -0.1252  1.4096  6.8727 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  37.2851     1.8776  19.858  < 2e-16 ***
+wt           -5.3445     0.5591  -9.559 1.29e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3.046 on 30 degrees of freedom
+Multiple R-squared:  0.7528,    Adjusted R-squared:  0.7446 
+F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10
+\end{verbatim}
+
+  \hypertarget{generalized-linear-models}{%
+  \chapter{Generalized Linear Models}\label{generalized-linear-models}}
+
+  \hypertarget{example-2}{%
+  \section{Example 2}\label{example-2}}
+
+  Write chapter 2 here.
+
+  Read Baltagi (2021)!
+
+  Add some R code.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(}\FunctionTok{glm}\NormalTok{(mpg }\SpecialCharTok{\textasciitilde{}}\NormalTok{ wt, }\AttributeTok{data =}\NormalTok{ mtcars))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+
+Call:
+glm(formula = mpg ~ wt, data = mtcars)
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  37.2851     1.8776  19.858  < 2e-16 ***
+wt           -5.3445     0.5591  -9.559 1.29e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for gaussian family taken to be 9.277398)
+
+    Null deviance: 1126.05  on 31  degrees of freedom
+Residual deviance:  278.32  on 30  degrees of freedom
+AIC: 166.03
+
+Number of Fisher Scoring iterations: 2
+\end{verbatim}
+
+  \hypertarget{references}{%
+  \chapter*{References}\label{references}}
+  \addcontentsline{toc}{chapter}{References}
+
+  \hypertarget{refs}{}
+  \begin{CSLReferences}{1}{0}
+  \leavevmode\vadjust pre{\hypertarget{ref-baltagi_econometrics_2021}{}}%
+  Baltagi, Badi H. 2021. \emph{Econometrics}. Classroom {Companion}:
+  {Economics}. Cham: Springer International Publishing.
+  \url{https://doi.org/10.1007/978-3-030-80149-6}.
+
+  \end{CSLReferences}
+  
+  % appendices go here
+  \appendix
+\end{document}

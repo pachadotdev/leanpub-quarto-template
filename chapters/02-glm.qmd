@@ -1,0 +1,13 @@
+# Generalized Linear Models
+
+## Example 2
+
+Write chapter 2 here.
+
+Read @baltagi_econometrics_2021!
+
+Add some R code.
+
+```{r example2, warning=FALSE, message=FALSE, eval=TRUE}
+summary(glm(mpg ~ wt, data = mtcars))
+```
